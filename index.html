@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sonora – Nasze Projekty</title>
+  <title>Sonora – Clarity in Complexity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
@@ -24,123 +24,67 @@
       background: linear-gradient(to right, #457b9d, #1d3557);
       color: white;
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 80px 20px 60px;
       position: relative;
       animation: fadeIn 1s ease-out;
     }
     header img {
-      width: 200px;
+      width: 350px;
       height: auto;
-      filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+      filter: drop-shadow(0 0 15px rgba(255,255,255,0.8));
       transition: transform 0.3s ease-in-out;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     header img:hover {
       transform: scale(1.05);
     }
     h1 {
       font-family: 'Orbitron', monospace;
-      font-size: 48px;
-      margin: 20px 0 10px;
+      font-size: 72px;
+      margin: 30px 0 20px;
       font-weight: 900;
-      letter-spacing: 4px;
+      letter-spacing: 8px;
       text-shadow: 0 0 20px rgba(255,255,255,0.3);
       background: linear-gradient(45deg, #ffffff, #a8dadc, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 20px rgba(255,255,255,0.3), 0 0 30px rgba(168,218,220,0.3); }
+      to { text-shadow: 0 0 30px rgba(255,255,255,0.6), 0 0 40px rgba(168,218,220,0.6); }
     }
     p.subtitle {
       font-family: 'Bebas Neue', cursive;
-      font-size: 20px;
+      font-size: 28px;
       color: #f1faee;
       font-weight: 400;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      margin-top: 10px;
     }
     section {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 60px auto;
       padding: 0 20px;
       animation: fadeInUp 1s ease-out;
     }
     h2 {
       font-size: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #1d3557;
       border-left: 5px solid #a8dadc;
       padding-left: 10px;
     }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+    .services li {
+      margin-bottom: 10px;
     }
-    .project-box {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .project-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #457b9d, #a8dadc);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    .project-box:hover::before {
-      transform: scaleX(1);
-    }
-    .project-box:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    }
-    .project-box h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #1d3557;
-      font-weight: 600;
-    }
-    .project-box p {
-      margin-bottom: 20px;
-      color: #555;
-      line-height: 1.7;
-    }
-    .project-box img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-top: 15px;
-      transition: transform 0.3s ease;
-    }
-    .project-box:hover img {
-      transform: scale(1.05);
-    }
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 15px;
-    }
-    .tech-tag {
-      background: #e8f0f9;
-      color: #1d3557;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
-      border: 1px solid #a8dadc;
+    .contact {
+      background: #f1f3f4;
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     .footer {
       text-align: center;
@@ -220,85 +164,55 @@
   <header>
     <div class="hero-bg"></div>
     <div class="nav-menu">
-      <a href="index.html">Strona Główna</a>
+      <a href="projekty.html">Nasze Projekty</a>
     </div>
     <div class="language-switch">
-      <a href="projekty.html">PL</a>
-      <a href="projects-en.html">EN</a>
+      <a href="index.html">PL</a>
+      <a href="index-en.html">EN</a>
     </div>
     <img src="Sonora1.png" alt="Sonora logo">
-    <h1>NASZE PROJEKTY</h1>
-    <p class="subtitle">INNOWACYJNE ROZWIĄZANIA LOGISTYCZNE</p>
+    <h1>SONORA</h1>
+    <p class="subtitle">CLARITY IN COMPLEXITY</p>
   </header>
 
   <section>
-    <h2>Portfolio realizacji</h2>
-    <p>Prezentujemy wybrane projekty, które pokazują nasze możliwości w tworzeniu zaawansowanych rozwiązań logistycznych i systemów wspomagających zarządzanie łańcuchem dostaw.</p>
-    
-    <div class="projects-grid">
-      <div class="project-box">
-        <h3>Production Planner</h3>
-        <p>Autorskie narzędzie do zarządzania planem produkcyjnym i zamówieniami. Umożliwia wizualizację danych, planowanie produkcji i analizę zamówień w czasie rzeczywistym. System integruje się z istniejącymi bazami danych i oferuje zaawansowane dashboardy analityczne.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Power BI</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Real-time Analytics</span>
-        </div>
-        <img src="A_website_homepage_for_Sonora,_a_consulting_firm_s.png" alt="Production Planner screenshot">
-      </div>
-      
-      <div class="project-box">
-        <h3>AI Demand Forecasting</h3>
-        <p>Zaawansowany system prognozowania popytu wykorzystujący algorytmy uczenia maszynowego. Analizuje historyczne dane sprzedaży, trendy sezonowe i zewnętrzne czynniki rynkowe, aby dostarczyć precyzyjne prognozy dla planowania zapasów.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Machine Learning</span>
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">TensorFlow</span>
-          <span class="tech-tag">Time Series</span>
-        </div>
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="AI Forecasting dashboard">
-      </div>
-      
-      <div class="project-box">
-        <h3>Supply Chain Optimizer</h3>
-        <p>Kompleksowy system optymalizacji łańcucha dostaw dla firmy z sektora FMCG. Rozwiązanie obejmuje optymalizację tras dostaw, zarządzanie zapasami w sieci dystrybucji oraz monitoring KPI w czasie rzeczywistym.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">SAP APO</span>
-          <span class="tech-tag">Optimization</span>
-          <span class="tech-tag">KPI Monitoring</span>
-          <span class="tech-tag">Route Planning</span>
-        </div>
-        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=600&q=80" alt="Supply chain network visualization">
-      </div>
-      
-      <div class="project-box">
-        <h3>Inventory Management Suite</h3>
-        <p>Zintegrowany system zarządzania zapasami dla sieci retail. Automatyzuje procesy uzupełniania zapasów, optymalizuje poziomy safety stock i zapewnia pełną transparentność stanów magazynowych w czasie rzeczywistym.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Inventory Optimization</span>
-          <span class="tech-tag">Automation</span>
-          <span class="tech-tag">Real-time Monitoring</span>
-          <span class="tech-tag">Safety Stock</span>
-        </div>
-        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80" alt="Warehouse management system">
-      </div>
-    </div>
+    <h2>O nas</h2>
+    <p>Sonora to nowoczesna firma konsultingowa oferująca <strong>szyte na miarę</strong> rozwiązania logistyczne dla małych i średnich przedsiębiorstw. Udowadniamy, że skuteczne rozwiązania logistyczne nie są zarezerwowane tylko dla korporacji — pomagamy MŚP działać jak najlepsi na rynku.</p>
+    <p>Łączymy elastyczność, wieloletnie doświadczenie i zaawansowane technologie, aby tworzyć rozwiązania logistyczne dokładnie dopasowane do realiów i potrzeb Twojej firmy.</p>
   </section>
 
   <section>
-    <h2>Dlaczego nasze rozwiązania działają?</h2>
-    <p>Każdy projekt realizujemy w oparciu o sprawdzone metodologie i najlepsze praktyki branżowe. Nasze doświadczenie w pracy z korporacjami pozwala nam tworzyć rozwiązania enterprise-grade, które są jednocześnie dostępne dla firm MŚP.</p>
-    <ul>
-      <li>🎯 <strong>Podejście holistyczne:</strong> Analizujemy cały łańcuch dostaw, nie tylko pojedyncze procesy</li>
-      <li>🚀 <strong>Technologie przyszłości:</strong> AI, ML i automatyzacja w służbie efektywności</li>
-      <li>📊 <strong>Data-driven decisions:</strong> Każde rozwiązanie oparte na twardych danych i analityce</li>
-      <li>🔧 <strong>Skalowalne architektury:</strong> Systemy, które rosną razem z Twoim biznesem</li>
+    <h2>Nasze usługi</h2>
+    <ul class="services">
+      <li>🔄 Planowanie popytu (Demand Planning)</li>
+      <li>📦 Zarządzanie zapasami i prognozowanie</li>
+      <li>🚛 Optymalizacja procesów logistycznych</li>
+      <li>🤖 Rozwiązania AI dla łańcucha dostaw</li>
+      <li>🧠 Szkolenia i doradztwo operacyjne</li>
     </ul>
   </section>
 
+  <section>
+    <h2>Dlaczego Sonora?</h2>
+    <p>Założyciel Sonora, Jakub Augustyniak, to lider z ponad 10-letnim doświadczeniem w logistyce i zarządzaniu łańcuchem dostaw. Współpracował z największymi firmami na rynku, takimi jak Metro, Ferrero, Imperial Tobacco czy Philips, prowadząc strategiczne projekty transformacji procesów i wdrożeń systemowych.</p>
+    <p>Łączymy kompetencje techniczne i strategiczne z unikalnym zrozumieniem realiów sektora MŚP. Dzięki temu oferujemy rozwiązania, które są nie tylko efektywne, ale też zrozumiałe, szybkie do wdrożenia i skalowalne.</p>
+    <ul>
+      <li>🚀 Ekspertyza w SAP APO, Power BI, SQL, AI, JIRA, S&OP</li>
+      <li>🎯 Podejście CEO-level: strategia, egzekucja i rozwój</li>
+      <li>🤝 Współpraca oparta na zaufaniu i wspólnych celach biznesowych</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Kontakt</h2>
+    <p>📧 <a href="mailto:augustyniak.kuba@gmail.com">augustyniak.kuba@gmail.com</a></p>
+    <p>📞 <a href="tel:+48607545748">+48 607 545 748</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/jakub-augustyniak/" target="_blank">LinkedIn</a></p>
+    <p>📍 Warszawa, Polska – działamy zdalnie w całej Europie</p>
+  </section>
+
   <div class="footer">
-    © 2025 Sonora | Wszystkie prawa zastrzeżone | <a href="index.html">Powrót do strony głównej</a>
+    © 2025 Sonora | Wszystkie prawa zastrzeżone
   </div>
 </body>
 </html>

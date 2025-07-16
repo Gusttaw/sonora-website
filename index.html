@@ -15,7 +15,7 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fdfdfb;
+      background: linear-gradient(to bottom right, #fdfdfb, #e8f0f9);
       color: #1d3557;
       line-height: 1.6;
       overflow-x: hidden;
@@ -29,9 +29,13 @@
       animation: fadeIn 1s ease-out;
     }
     header img {
-      width: 120px;
+      width: 180px;
       height: auto;
-      filter: drop-shadow(0 0 5px white);
+      filter: drop-shadow(0 0 8px white);
+      transition: transform 0.3s ease-in-out;
+    }
+    header img:hover {
+      transform: scale(1.08);
     }
     h1 {
       font-size: 42px;
@@ -53,6 +57,8 @@
       font-size: 30px;
       margin-bottom: 20px;
       color: #1d3557;
+      border-left: 5px solid #a8dadc;
+      padding-left: 10px;
     }
     .services li {
       margin-bottom: 10px;
@@ -72,8 +78,10 @@
     a {
       color: #1d3557;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
     a:hover {
+      color: #e63946;
       text-decoration: underline;
     }
     .hero-bg {
@@ -89,7 +97,40 @@
       bottom: 0;
       z-index: -1;
     }
-
+    .project-box {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .project-box:hover {
+      transform: translateY(-5px);
+    }
+    .project-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-switch a {
+      color: white;
+      font-weight: bold;
+      margin-left: 10px;
+      background: rgba(255,255,255,0.1);
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .language-switch a:hover {
+      background: rgba(255,255,255,0.3);
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -103,6 +144,10 @@
 <body>
   <header>
     <div class="hero-bg"></div>
+    <div class="language-switch">
+      <a href="index.html">PL</a>
+      <a href="index-en.html">EN</a>
+    </div>
     <img src="Sonora1.png" alt="Sonora logo">
     <h1>Sonora</h1>
     <p class="subtitle">Clarity in Complexity</p>
@@ -110,7 +155,8 @@
 
   <section>
     <h2>O nas</h2>
-    <p>Sonora to nowoczesna firma konsultingowa oferująca <strong>szyte na miarę</strong> rozwiązania logistyczne dla małych i średnich przedsiębiorstw. Korzystając z doświadczenia w pracy z globalnymi markami, tworzymy rozwiązania dopasowane do Twoich procesów, danych i celów.</p>
+    <p>Sonora to nowoczesna firma konsultingowa oferująca <strong>szyte na miarę</strong> rozwiązania logistyczne dla małych i średnich przedsiębiorstw. Udowadniamy, że skuteczne rozwiązania logistyczne nie są zarezerwowane tylko dla korporacji — pomagamy MŚP działać jak najlepsi na rynku.</p>
+    <p>Łączymy elastyczność, wieloletnie doświadczenie i zaawansowane technologie, aby tworzyć rozwiązania logistyczne dokładnie dopasowane do realiów i potrzeb Twojej firmy.</p>
   </section>
 
   <section>
@@ -133,6 +179,15 @@
       <li>🎯 Podejście CEO-level: strategia, egzekucja i rozwój</li>
       <li>🤝 Współpraca oparta na zaufaniu i wspólnych celach biznesowych</li>
     </ul>
+  </section>
+
+  <section>
+    <h2>Nasze projekty</h2>
+    <div class="project-box">
+      <h3>Production Planner</h3>
+      <p>Autorskie narzędzie do zarządzania planem produkcyjnym i zamówieniami. Umożliwia wizualizację danych, planowanie produkcji i analizę zamówień w czasie rzeczywistym.</p>
+      <img src="A_website_homepage_for_Sonora,_a_consulting_firm_s.png" alt="Production Planner screenshot">
+    </div>
   </section>
 
   <section class="contact">

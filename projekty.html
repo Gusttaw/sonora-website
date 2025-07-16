@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonora – Nasze Projekty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #fdfdfb, #e8f0f9);
+      color: #1d3557;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(to right, #457b9d, #1d3557);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      animation: fadeIn 1s ease-out;
+    }
+    header img {
+      width: 200px;
+      height: auto;
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+      transition: transform 0.3s ease-in-out;
+      margin-bottom: 20px;
+    }
+    header img:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      font-family: 'Orbitron', monospace;
+      font-size: 48px;
+      margin: 20px 0 10px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-shadow: 0 0 20px rgba(255,255,255,0.3);
+      background: linear-gradient(45deg, #ffffff, #a8dadc, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    p.subtitle {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 20px;
+      color: #f1faee;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: #1d3557;
+      border-left: 5px solid #a8dadc;
+      padding-left: 10px;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .project-box {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #457b9d, #a8dadc);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    .project-box:hover::before {
+      transform: scaleX(1);
+    }
+    .project-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+    .project-box h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #1d3557;
+      font-weight: 600;
+    }
+    .project-box p {
+      margin-bottom: 20px;
+      color: #555;
+      line-height: 1.7;
+    }
+    .project-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 15px;
+      transition: transform 0.3s ease;
+    }
+    .project-box:hover img {
+      transform: scale(1.05);
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .tech-tag {
+      background: #e8f0f9;
+      color: #1d3557;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid #a8dadc;
+    }
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin: 60px 0 20px;
+    }
+    a {
+      color: #1d3557;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #e63946;
+      text-decoration: underline;
+    }
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1605902711622-cfb43c44367c?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      filter: brightness(0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-switch a {
+      color: white;
+      font-weight: bold;
+      margin-left: 10px;
+      background: rgba(255,255,255,0.1);
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .language-switch a:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    .nav-menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .nav-menu a {
+      color: white;
+      font-weight: bold;
+      margin-right: 20px;
+      background: rgba(255,255,255,0.1);
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .nav-menu a:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-bg"></div>
+    <div class="nav-menu">
+      <a href="index.html">Strona Główna</a>
+    </div>
+    <div class="language-switch">
+      <a href="projekty.html">PL</a>
+      <a href="projects-en.html">EN</a>
+    </div>
+    <img src="Sonora1.png" alt="Sonora logo">
+    <h1>NASZE PROJEKTY</h1>
+    <p class="subtitle">INNOWACYJNE ROZWIĄZANIA LOGISTYCZNE</p>
+  </header>
+
+  <section>
+    <h2>Portfolio realizacji</h2>
+    <p>Prezentujemy wybrane projekty, które pokazują nasze możliwości w tworzeniu zaawansowanych rozwiązań logistycznych i systemów wspomagających zarządzanie łańcuchem dostaw.</p>
+    
+    <div class="projects-grid">
+      <div class="project-box">
+        <h3>Production Planner</h3>
+        <p>Autorskie narzędzie do zarządzania planem produkcyjnym i zamówieniami. Umożliwia wizualizację danych, planowanie produkcji i analizę zamówień w czasie rzeczywistym. System integruje się z istniejącymi bazami danych i oferuje zaawansowane dashboardy analityczne.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Power BI</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Real-time Analytics</span>
+        </div>
+        <img src="A_website_homepage_for_Sonora,_a_consulting_firm_s.png" alt="Production Planner screenshot">
+      </div>
+      
+      <div class="project-box">
+        <h3>AI Demand Forecasting</h3>
+        <p>Zaawansowany system prognozowania popytu wykorzystujący algorytmy uczenia maszynowego. Analizuje historyczne dane sprzedaży, trendy sezonowe i zewnętrzne czynniki rynkowe, aby dostarczyć precyzyjne prognozy dla planowania zapasów.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">Time Series</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="AI Forecasting dashboard">
+      </div>
+      
+      <div class="project-box">
+        <h3>Supply Chain Optimizer</h3>
+        <p>Kompleksowy system optymalizacji łańcucha dostaw dla firmy z sektora FMCG. Rozwiązanie obejmuje optymalizację tras dostaw, zarządzanie zapasami w sieci dystrybucji oraz monitoring KPI w czasie rzeczywistym.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">SAP APO</span>
+          <span class="tech-tag">Optimization</span>
+          <span class="tech-tag">KPI Monitoring</span>
+          <span class="tech-tag">Route Planning</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=600&q=80" alt="Supply chain network visualization">
+      </div>
+      
+      <div class="project-box">
+        <h3>Inventory Management Suite</h3>
+        <p>Zintegrowany system zarządzania zapasami dla sieci retail. Automatyzuje procesy uzupełniania zapasów, optymalizuje poziomy safety stock i zapewnia pełną transparentność stanów magazynowych w czasie rzeczywistym.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Inventory Optimization</span>
+          <span class="tech-tag">Automation</span>
+          <span class="tech-tag">Real-time Monitoring</span>
+          <span class="tech-tag">Safety Stock</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80" alt="Warehouse management system">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dlaczego nasze rozwiązania działają?</h2>
+    <p>Każdy projekt realizujemy w oparciu o sprawdzone metodologie i najlepsze praktyki branżowe. Nasze doświadczenie w pracy z korporacjami pozwala nam tworzyć rozwiązania enterprise-grade, które są jednocześnie dostępne dla firm MŚP.</p>
+    <ul>
+      <li>🎯 <strong>Podejście holistyczne:</strong> Analizujemy cały łańcuch dostaw, nie tylko pojedyncze procesy</li>
+      <li>🚀 <strong>Technologie przyszłości:</strong> AI, ML i automatyzacja w służbie efektywności</li>
+      <li>📊 <strong>Data-driven decisions:</strong> Każde rozwiązanie oparte na twardych danych i analityce</li>
+      <li>🔧 <strong>Skalowalne architektury:</strong> Systemy, które rosną razem z Twoim biznesem</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    © 2025 Sonora | Wszystkie prawa zastrzeżone | <a href="index.html">Powrót do strony głównej</a>
+  </div>
+</body>
+</html>

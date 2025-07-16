@@ -6,7 +6,7 @@
   <title>Sonora – Clarity in Complexity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -24,28 +24,45 @@
       background: linear-gradient(to right, #457b9d, #1d3557);
       color: white;
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 80px 20px 60px;
       position: relative;
       animation: fadeIn 1s ease-out;
     }
     header img {
-      width: 240px;
+      width: 350px;
       height: auto;
-      filter: drop-shadow(0 0 10px white);
+      filter: drop-shadow(0 0 15px rgba(255,255,255,0.8));
       transition: transform 0.3s ease-in-out;
+      margin-bottom: 30px;
     }
     header img:hover {
-      transform: scale(1.08);
+      transform: scale(1.05);
     }
     h1 {
-      font-size: 42px;
-      margin: 20px 0 10px;
-      font-weight: 800;
+      font-family: 'Orbitron', monospace;
+      font-size: 72px;
+      margin: 30px 0 20px;
+      font-weight: 900;
+      letter-spacing: 8px;
+      text-shadow: 0 0 20px rgba(255,255,255,0.3);
+      background: linear-gradient(45deg, #ffffff, #a8dadc, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 20px rgba(255,255,255,0.3), 0 0 30px rgba(168,218,220,0.3); }
+      to { text-shadow: 0 0 30px rgba(255,255,255,0.6), 0 0 40px rgba(168,218,220,0.6); }
     }
     p.subtitle {
-      font-size: 20px;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 28px;
       color: #f1faee;
-      font-weight: 500;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      margin-top: 10px;
     }
     section {
       max-width: 1000px;
@@ -97,23 +114,6 @@
       bottom: 0;
       z-index: -1;
     }
-    .project-box {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
-    .project-box:hover {
-      transform: translateY(-5px);
-    }
-    .project-box img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
     .language-switch {
       position: absolute;
       top: 20px;
@@ -131,6 +131,25 @@
     .language-switch a:hover {
       background: rgba(255,255,255,0.3);
     }
+    .nav-menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .nav-menu a {
+      color: white;
+      font-weight: bold;
+      margin-right: 20px;
+      background: rgba(255,255,255,0.1);
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .nav-menu a:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -144,13 +163,16 @@
 <body>
   <header>
     <div class="hero-bg"></div>
+    <div class="nav-menu">
+      <a href="projekty.html">Nasze Projekty</a>
+    </div>
     <div class="language-switch">
       <a href="index.html">PL</a>
       <a href="index-en.html">EN</a>
     </div>
     <img src="Sonora1.png" alt="Sonora logo">
-    <h1 style="font-family: 'Oswald', sans-serif; font-size: 56px; letter-spacing: 2px;">Sonora</h1>
-    <p class="subtitle" style="font-family: 'Oswald', sans-serif; font-size: 22px; letter-spacing: 1px;">Clarity in Complexity</p>
+    <h1>SONORA</h1>
+    <p class="subtitle">CLARITY IN COMPLEXITY</p>
   </header>
 
   <section>
@@ -179,15 +201,6 @@
       <li>🎯 Podejście CEO-level: strategia, egzekucja i rozwój</li>
       <li>🤝 Współpraca oparta na zaufaniu i wspólnych celach biznesowych</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>Nasze projekty</h2>
-    <div class="project-box">
-      <h3>Production Planner</h3>
-      <p>Autorskie narzędzie do zarządzania planem produkcyjnym i zamówieniami. Umożliwia wizualizację danych, planowanie produkcji i analizę zamówień w czasie rzeczywistym.</p>
-      <img src="A_website_homepage_for_Sonora,_a_consulting_firm_s.png" alt="Production Planner screenshot">
-    </div>
   </section>
 
   <section class="contact">

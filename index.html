@@ -59,11 +59,15 @@
         }
 
         .logo {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary);
+            display: flex;
+            align-items: center;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
         }
 
         .nav-links {
@@ -472,7 +476,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">SONORA</a>
+            <a href="#" class="logo">
+                <img src="https://github.com/Gusttaw/sonora-website/raw/main/Sonora1.png" alt="Sonora Logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="#features">Usługi</a></li>
                 <li><a href="#about">O nas</a></li>

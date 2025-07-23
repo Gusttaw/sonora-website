@@ -59,15 +59,18 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
             text-decoration: none;
         }
 
-        .logo img {
-            height: 40px;
-            width: auto;
-            filter: brightness(0) invert(1);
+        .hero-logo {
+            width: 300px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
         }
 
         .nav-links {
@@ -237,6 +240,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .feature-card {
@@ -476,9 +481,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="https://github.com/Gusttaw/sonora-website/raw/main/Sonora1.png" alt="Sonora Logo">
-            </a>
+            <a href="#" class="logo">SONORA</a>
             <ul class="nav-links">
                 <li><a href="#features">Usługi</a></li>
                 <li><a href="#about">O nas</a></li>
@@ -491,6 +494,7 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
+                <img src="https://github.com/Gusttaw/sonora-website/raw/main/Sonora1.png" alt="Sonora Logo" class="hero-logo">
                 <div class="hero-tagline">// TAILORED LOGISTICS SOLUTIONS</div>
                 <h1>Rozwiązania szyte na miarę Twojej firmy</h1>
                 <p class="hero-description">
@@ -553,6 +557,22 @@
                     <p class="feature-description">
                         Systemy raportowania i analizy skrojone pod Twoje KPI, z wizualizacjami dostosowanymi 
                         do potrzeb różnych poziomów zarządzania.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">S&OP na miarę organizacji</h3>
+                    <p class="feature-description">
+                        Procesy Sales & Operations Planning dostosowane do Twojej struktury organizacyjnej, 
+                        cykli biznesowych i specyfiki branży. Pełna integracja z istniejącymi systemami.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">Integracje i automatyzacja</h3>
+                    <p class="feature-description">
+                        Spersonalizowane rozwiązania integracyjne łączące SAP, Power BI, CRM i inne systemy. 
+                        Automatyzacja dostosowana do Twoich unikalnych workflow i procesów biznesowych.
                     </p>
                 </div>
             </div>
